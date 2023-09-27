@@ -16,14 +16,14 @@ var romanToInt = function(s) {
     for(let i = 0; i < s.length; i++) {
         const current = s[i];
         const next = s[i+1];
-        if(nums[next] > nums[current]) {
+        if(nums[next] > nums[current] && nums[next] !== undefined) {
             //console.log(nums[next] - nums[current]);
             total += nums[next] - nums[current];
             i++;
         } else {
             total += nums[current];
         }
-        console.log(total);
+        //console.log(total);
     }
     return total;
 };
