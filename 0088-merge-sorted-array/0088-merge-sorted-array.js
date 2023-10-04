@@ -6,16 +6,6 @@
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
 var merge = function(nums1, m, nums2, n) {
-
-    /*if(n === 0) {
-        return nums1;
-    } else if (m === 0) {
-        for(let k = 0; k < n; k++) {
-            nums1[k] = nums2[k];
-        }
-        return nums1;
-    }
-    */
     
     //Adding the numbers from second array to the first
     for(let i = 0; i < n; i++) {
@@ -44,30 +34,5 @@ var merge = function(nums1, m, nums2, n) {
         }
         
     }
-    
-    /*for(let i = 0; i < n; i++) {
-        const num2Current = nums2[i];
-        
-        for(let j = 0; j < m + n; j++) {
-            const num1Current = nums1[j];
-             if( num1Current < num2Current && num1Current === 0 && nums1[j-1] !== 0) {
-                nums1[j] = num2Current;
-                //console.log(nums1);
-                break;
-            } 
-           /* if( num1Current > num2Current ) {
-                let remainder = nums1.slice(j, m + n - 1);
-                let remainingNums = remainder.length;
-                nums1[j] = num2Current;
-                
-                while(remainingNums > 0) {
-                    nums1[j + remainingNums] = remainder[remainingNums - 1];
-                    remainingNums--;
-                }
-                break;
-            } */
-        
-
-    
    return nums1;
 };
